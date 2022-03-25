@@ -12,9 +12,9 @@ main.use("/static", express.static("stop"));
 
 main.use(express.urlencoded());
 
-main.set("view engine", "pug");
+main.set("view engine", "html");
 
-main.set("views", path.join(__dirname, "view"));
+main.set("views", path.join(__dirname, "EXPRESS"));
 
 main.get("/", (req, res) => {
   // res.status(200).render('index', { title: 'Pug User', message: 'Hello there! Please Subscribe To My Channel #Perfect1.O' })
@@ -34,7 +34,7 @@ main.post("/", (req, res) => {
   let dataToWrite = `The Name Of The Customer is ${name}, ${age} years old, ${gender}, living at ${address}. More About Him/Her ${more}`;
   fs.writeFileSync("data.txt", dataToWrite);
   const promt = { message: "Your form is submitted successfully" };
-  res.status(200).render("index.pug", promt);
+  res.status(200).render("index.html", promt);
 });
 
 main.listen(port, () => {
