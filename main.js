@@ -20,7 +20,7 @@ main.get("/", (req, res) => {
   // res.status(200).render('index', { title: 'Pug User', message: 'Hello there! Please Subscribe To My Channel #Perfect1.O' })
   const tec = "I Love Someone Who Actually Loves Me";
   const promt = { title: "Our Gym", content: tec };
-  res.status(200).render("index.pug", promt);
+  res.status(200).render("index.html", promt);
 });
 
 main.post("/", (req, res) => {
