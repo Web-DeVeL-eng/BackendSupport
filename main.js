@@ -24,7 +24,7 @@ main.get("/", (req, res) => {
 });
 
 main.post("/", (req, res) => {
-  // console.log(req.body);
+  console.log(req.body);
   name = req.body.name;
   age = req.body.age;
   gender = req.body.gender;
